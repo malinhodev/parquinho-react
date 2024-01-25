@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 //componentes
 import FirstComponent from './components/FisrtComponent'
+import Operation from './components/Operation'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -19,6 +20,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <FirstComponent/>
+      <Operation/>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
