@@ -1,6 +1,7 @@
 
 import './App.css';
 import microphone from './assets/bg-desktop.png'
+import ManageData from './components/ManageData';
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
         <div>
           <img src={microphone} alt="imagem microfone vintage" />
         </div>
+    
+        <ManageData />
       </header>
     </div>
   );
