@@ -1,6 +1,7 @@
 
 import './App.css';
 import microphone from './assets/bg-desktop.png'
+import ConditionalRender from './components/ConditionalRender';
 import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
 
@@ -19,6 +20,7 @@ function App() {
     
         <ManageData />
         <ListRender/>
+        <ConditionalRender/>
       </header>
     </div>
   );
