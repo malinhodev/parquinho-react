@@ -1,6 +1,7 @@
 
 import './App.css';
 import microphone from './assets/bg-desktop.png'
+import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         </div>
     
         <ManageData />
+        <ListRender/>
       </header>
     </div>
   );
