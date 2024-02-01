@@ -6,13 +6,22 @@ import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
 import CardDetails from './components/CardDetails';
 import FunctionProp from './components/FunctionProp';
+import CardUsers from './components/CardUsers';
 
 function App() {
+
+
   const cars = [
     {id: 1, brand: 'Ferreri', color: "amarela", newCar: true, km: 0},
     {id: 2, brand: 'kia', color: "branco", newCar: false, km: 15463},
     {id: 3, brand: 'Renault', color: "azul", newCar: false, km: 987453},
     {id: 4, brand: 'wv', color: "vermelho", newCar: true, km: 0},
+  ]
+
+  const users = [
+    {id: 1, name: 'Marlon', old: 31, job: 'Garçom'},
+    {id: 2, name: 'Vanda', old: 28, job: 'Cumin'},
+    {id: 3, name: 'Bianca', old: 8, job: 'desempregada'},
   ]
 
   function showMessage(){
@@ -35,7 +44,7 @@ function App() {
         <ConditionalRender/>
         {/**loop em array = mostrar todos os cards */}
         <h3> lista com loop</h3>
-        {cars.map((car,)=>(
+        {cars.map((car)=>(
           <CardDetails 
           key={car.id}
           brand={car.brand}
@@ -45,6 +54,16 @@ function App() {
         ))}
 
         <FunctionProp myFunction={showMessage}/>
+
+        <h3>lista de usuários</h3>
+        {users.map((user)=>(
+          <CardUsers
+          key={user.id}
+          name={user.name}
+          old={user.old} 
+          job={user.job} 
+          />
+        ))}
       </header>
     </div>
   );
