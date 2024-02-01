@@ -5,6 +5,7 @@ import ConditionalRender from './components/ConditionalRender';
 import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
 import CardDetails from './components/CardDetails';
+import FunctionProp from './components/FunctionProp';
 
 function App() {
   const cars = [
@@ -13,6 +14,10 @@ function App() {
     {id: 3, brand: 'Renault', color: "azul", newCar: false, km: 987453},
     {id: 4, brand: 'wv', color: "vermelho", newCar: true, km: 0},
   ]
+
+  function showMessage(){
+    console.log('Evento do componente pai!')
+  }
   return (
     <div className="App">
       <header className="App-header">
@@ -30,13 +35,16 @@ function App() {
         <ConditionalRender/>
         {/**loop em array = mostrar todos os cards */}
         <h3> lista com loop</h3>
-        {cars.map((car)=>(
+        {cars.map((car,)=>(
           <CardDetails 
+          key={car.id}
           brand={car.brand}
           color={car.color} 
           newCar={car.newCar} 
           km={car.km}/>
         ))}
+
+        <FunctionProp myFunction={showMessage}/>
       </header>
     </div>
   );
