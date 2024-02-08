@@ -1,0 +1,33 @@
+.container{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 4px;
+    align-items: center;
+    border: 1px solid beige;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.image img{
+    max-width: 150px;
+    background-position: cover;
+    border-radius: 5px;
+}
+
+.details ul li{
+    color: beige;
+}
+
+.details ul{
+    width: 100px;
+    margin: 0 auto;
+}
+
+.details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

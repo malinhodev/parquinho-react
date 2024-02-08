@@ -1,0 +1,11 @@
+*{
+  margin: 0;
+  padding: 0;
+  background-color: dimgray;
+}
+h1{
+  color: beige;
+}
+.App {
+  text-align: center;
+}
