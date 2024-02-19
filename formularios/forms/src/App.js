@@ -9,7 +9,8 @@ function App() {
         <MyForm user={{
           name: "Maicon",
           email: "maicon@email.com",
-          bio: ''
+          bio: 'estou tentando amigo...',
+          cargo: 'editor'
         }}/>
     </div>
   );

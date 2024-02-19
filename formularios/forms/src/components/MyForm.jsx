@@ -4,7 +4,7 @@ const MyForm = ({user}) => {
     const [name,setName] = useState(user ? user.name : '')
     const [email,setEmail] = useState(user ? user.email : "")
     const [bio,setBio] = useState(user ? user.bio : "")
-    const [cargo,setCargo] = useState('')
+    const [cargo,setCargo] = useState(user ? user.cargo : "")
 
     const handleName = (e)=>{
         setName(e.target.value)
@@ -39,7 +39,7 @@ const MyForm = ({user}) => {
                 </label>
                 <label htmlFor="">
                     <span>cargo:</span>
-                    <select name="cargo" onChange={(e)=> setCargo(e.target.value)}>
+                    <select name="cargo" onChange={(e)=> setCargo(e.target.value)} value={cargo}>
                         <option value="editor">editor</option>
                         <option value="chefe">chefe</option>
                         <option value="fotografo">fotográfo</option>
